@@ -1,0 +1,84 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://ui/mobile_controls.gd" id="1_i6g2n"]
+
+[node name="MobileControls" type="CanvasLayer"]
+layer = 10
+script = ExtResource("1_i6g2n")
+
+[node name="Controls" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Left" type="Control" parent="Controls"]
+layout_mode = 1
+anchors_preset = 3
+anchor_top = 1.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -260.0
+offset_right = 264.0
+offset_bottom = -24.0
+
+[node name="JoystickTouchArea" type="ColorRect" parent="Controls/Left"]
+custom_minimum_size = Vector2(220, 220)
+layout_mode = 2
+color = Color(0.05, 0.08, 0.12, 0.4)
+
+[node name="JoystickKnob" type="ColorRect" parent="Controls/Left/JoystickTouchArea"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 0
+offset_left = 65.0
+offset_top = 65.0
+offset_right = 155.0
+offset_bottom = 155.0
+color = Color(0.85, 0.91, 1, 0.7)
+
+[node name="Right" type="Control" parent="Controls"]
+layout_mode = 1
+anchors_preset = 9
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -300.0
+offset_right = -24.0
+offset_bottom = -24.0
+
+[node name="AttackButton" type="Button" parent="Controls/Right"]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 130.0
+offset_right = 280.0
+offset_bottom = 230.0
+text = "ATK"
+
+[node name="JumpButton" type="Button" parent="Controls/Right"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 180.0
+offset_right = 160.0
+offset_bottom = 280.0
+text = "JUMP"
+
+[node name="DodgeButton" type="Button" parent="Controls/Right"]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 20.0
+offset_right = 280.0
+offset_bottom = 120.0
+text = "DODGE"
+
+[node name="InteractButton" type="Button" parent="Controls/Right"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 60.0
+offset_right = 160.0
+offset_bottom = 160.0
+text = "USE"
